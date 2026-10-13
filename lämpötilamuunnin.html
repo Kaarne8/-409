@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilamuunnin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+    <div class="container mt-4">
+        <h2>Lämpötilamuunnin</h2>
+        <p>Syötä lämpötila, valitse muunnos ja paina painiketta.</p>
+        
+        <div class="row g-3 align-items-center mt-2">
+            <div class="col-auto">
+                <input type="text" id="syote" class="form-control" placeholder="Esim. 25">
+            </div>
+            <div class="col-auto">
+                <select id="suunta" class="form-select">
+                    <option value="c-f">Celsius -> Fahrenheit</option>
+                    <option value="f-c">Fahrenheit -> Celsius</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <select id="tarkkuus" class="form-select">
+                    <option value="1">1 desimaali</option>
+                    <option value="2" selected>2 desimaalia</option>
+                    <option value="3">3 desimaalia</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button onclick="laskeMuunnos()" class="btn btn-success">Muunna</button>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div id="vastaus" class="p-3 rounded d-none"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
